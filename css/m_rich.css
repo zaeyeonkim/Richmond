@@ -1,0 +1,208 @@
+@charset "utf-8";
+@media screen and (max-width: 900px) {  
+    /* 공통  */
+    section+section,
+    footer {padding: 0 2.5%;}
+    section {margin-bottom: 40px;}
+
+    /* header */
+    header {height: 70px;}
+    header .logo {
+        position: static;
+        width: 140px;
+        height: 50px;
+        margin: 20px auto 0;
+    }
+    /* hambuber menu */
+    header .menu {
+        display: block;
+        position: absolute;
+        top: 24px; left: 2.5%;
+        width: 40px; height: 40px;
+        transition: all 0.3s;
+    }
+    .menu .item {
+        display: block;
+        height: 2px;
+        background: #000;
+        margin: 0 0 8px;
+        transition: all 0.2s;
+    }
+    .menu .item:nth-child(1) {width: 22px}
+    .menu .item:nth-child(2) {width: 34px}
+    .menu .item:nth-child(3) {width: 18px}
+    .menu.on .item:nth-child(2) {opacity: 0;}
+    .menu.on .item:nth-child(1) {
+        width: 34px;
+        transform: rotate(45deg);
+        transform-origin: 2px;
+    }
+    .menu.on .item:nth-child(3) {
+        width: 34px;
+        transform: rotate(-45deg);
+        transform-origin: 3px;
+    }
+    /* 
+        transform-origin: transform 속성과 함께 씀
+        rotate()/skew() 회전과 변형 속성을 선언할 때 기준점을 정하는 속성
+        초기값은 50% 50%로 요소의 가운데가 중심점임.
+        tranform-origin: 2px (left 2px top 2px)
+    */
+    /* gnb */
+    header .gnb {
+        position: absolute;
+        top: 70px; left: -100%;
+        transform: none;
+        width: 65vw;
+        height: 100vh;
+        background: #fff;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    /* gnb - depth1 */
+    header .gnb > ul {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+     header .gnb>ul>li>a {
+        display: block;
+        line-height: 80px;
+        border-bottom: 1px dotted #cdcdcd;
+    }
+
+    /* top_util */
+    header .top_util {right: 2.5%;}
+    header .top_util .tel_m > span {display: none;} /* 전화번호 텍스트 */
+    header .top_util .tel_m:before {
+        content: '';
+        position: absolute;
+        top: 50%;left: 0;
+        width: 32px;
+        height: 32px;
+        margin-top: -16px;
+        background: url(../img/ico_clall.svg) no-repeat center/cover;
+    }   
+    
+    /* main_video */
+    #main_mov {padding: 0 2.5%;}
+    #main_mov .cont_wrap {height: 50vh;}
+
+    /* main01 */
+    #main01 .cont_wrap {
+        height: 60vh;
+        background-attachment: scroll;
+    }
+    #main01 .main_cont {
+        padding-top: 25px;
+        height: 30vh;
+    }
+    .cont_wrap .b_text {
+        font-size: 36px;
+        margin-bottom: 25px; 
+    }
+    .cont_wrap .m_text {font-size: 18px;}
+    .cont_wrap .s_text {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    /* main02 */
+    #main02 .cont_wrap {
+        padding: 60px 0 0;
+        display: block;
+    }
+    #main02 .cont_left {width: 100%;}
+    #main02 .cont_left .s_text {font-size: 16px;}
+    #main02 .cont_right {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .cont_right .rich_bg {
+        width: 33.3333%;
+        height: 590px;
+        margin-left: 0;     
+    }
+    .cont_right .rich_bg.bg2 {margin-top: 0;}
+    .cont_right .rich_bg.bg3 {margin-top: 0;}
+
+    /* main03 */
+    #main03 .cont_wrap {padding: 50px 0;}
+    #main03 .title_area .sec_title {font-size: 26px;}
+    #main03 .title_area .sec_text > span {font-size: 16px;}
+    #main03 .space_area {
+        max-width: 1200px;
+        margin: 40px auto 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .space_area .space {
+        width: 40%; height: auto;
+        transition: none;
+    }
+    .space_area .space:hover {box-shadow: none}
+    .space_area .space > img {
+        position: static;
+        display: block;
+    }
+    .space_area .space > img:first-child {display: none;}
+    .space_area .space > img:last-child {opacity: 1;}
+
+    /* main04 */
+    #main04 .cont_wrap{padding: 40px 0;}
+    #main04 .title_area .ss_text {font-size: 16px; }
+    #main04 .title_area .m_text {font-size: 18px;}
+    #main04 .title_area .b_text {
+        font-size: 30px; 
+        margin-bottom: 30px;
+    }
+    #main04 .model_list {
+        margin: 40px auto 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;   
+        align-items: center; 
+    }
+    #main04 .model_list li {
+        width: 94%;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 20px 15px;
+    }
+    .model_list .model_text > span:first-child {font-size: 30px;}
+    .model_list .model_text > span > span {font-size: 22px;}
+    .model_list .model_text > span:last-child {font-size: 16px;}
+    .model_list .info_area .area_pic {    
+        height: 80px;
+        margin-top: 24px;
+        background-position: center 24%;
+    }
+    .model_list .info_area .area_pic > span {margin-top: 46px;}
+
+    /* footer */
+    footer .cont_wrap{padding: 30px 2.5%;}
+    footer .cont_wrap > div {margin-bottom: 25px;}
+    footer img {margin-bottom: 25px;}
+    footer .foot_text {text-align: left;}
+    footer .foot_address span {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    footer .const_list {max-width: 70vw; }
+    footer .const_list p {
+        font-size: 16px; 
+        font-weight: 500;
+        margin: 0 12px;
+    }
+    footer .const_list span {
+        font-size: 15px; 
+        margin-right: 10px;
+        font-weight: 400;
+    }
+}
+
+    

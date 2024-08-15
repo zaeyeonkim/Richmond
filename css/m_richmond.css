@@ -1,0 +1,359 @@
+@charset "utf-8";
+
+@media screen and (min-width: 901px) and (max-width: 1440px) {
+}
+@media screen and (max-width: 900px) {
+
+    /* 공통 */
+    section + section,
+    footer {
+        padding: 0 2.5%;
+    }
+
+    section {
+        margin-bottom: 3.13em;
+    }
+
+    /* header */
+    header {
+        height: 70px;
+    }
+
+    header .logo {
+        position: static;
+        width: 160px;
+        height: 40px;
+        margin: 20px auto 0;
+    }
+
+    header .logo > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(../img/logo.png) no-repeat center/contain;
+    }
+
+    /* header - hambuger menu */
+    header .menu {
+        display: block;
+        position: absolute;
+        left: 2.5%;
+        top: 20px;
+        width: 40px;
+        height: 40px;
+        /* padding: 35px 25px; */
+        transition: all 0.3s;
+    }
+
+    .menu .item {
+        display: block;
+        background: #000;
+        height: 2px;
+        margin: 0 0 8px;
+        transition: all 0.2s;
+    }
+
+    .menu .item:nth-child(1) {
+        width: 28px
+    }
+
+    .menu .item:nth-child(2) {
+        width: 34px
+    }
+
+    .menu .item:nth-child(3) {
+        width: 26px
+    }
+
+    .menu.on .item:nth-child(1) {
+        width: 34px;
+        transform: rotate(45deg);
+        transform-origin: 2px;
+    }
+
+    .menu.on .item:nth-child(2) {
+        opacity: 0
+    }
+
+    .menu.on .item:nth-child(3) {
+        width: 34px;
+        transform: rotate(-45deg);
+        transform-origin: 3px;
+        /*
+    - transform-origin 속성은 transform 속성과 함께 사용,
+    회전중심을 지정함.
+    - rotate(), skew()등의 회전과 변형 속성 사용시 기준점을 지정하는 속성으로 초기값은 50% 50%로 요소의 중심점이 됨.
+    - transform-origin: 2px (left 2px top 2px)
+    */
+    }
+
+    /* gnb */
+    header .gnb {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        text-align: center;
+        font-size: 0;
+    }
+
+    /* gnb - depth1 */
+    header .gnb {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        transform: none;
+        width: 65vw;
+        height: 100vh;
+        background: #fff;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    header .gnb>ul {
+        display: block;
+        overflow: hidden;
+    }
+
+    header .gnb>ul>li {
+        position: relative;
+        float: none;
+        width: 100%;
+    }
+
+    header .gnb>ul>li>a {
+        display: inline-block;
+        padding: 0 30px;
+        line-height: 80px;
+        color: #000;
+        border-bottom: 1px dotted #cdcdcd;
+    }
+
+    /* depth2 -sub */
+    header .gnb>ul ul {
+        display: none;
+    }
+
+    /*  header .gnb>ul ul {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        display: none;
+        z-index: 11;
+    } 
+
+    header .gnb>ul ul a {
+        display: block;
+        font-size: 1rem;
+        line-height: 2em;
+    }
+
+    header .gnb>ul ul a:hover,
+    header .gnb>ul ul a:focus {
+        color: #8d7249;
+        text-decoration: underline;
+    }
+ 
+    .bgGnb {
+        /* position: fixed;
+        left: 0;
+        right: 0;
+        top: 100px;
+        min-height: 170px;
+        background: #fff;
+        display: none;
+        z-index: 50; 
+    }
+*/
+    /* top_util */
+    header .top_util {
+        right: 2.5%;
+    }
+
+    header .top_util .tel_m>span {
+        display: none;
+    }
+
+    header .top_util .tel_m:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        margin-top: -16px;
+    }
+
+    /* main_video */
+    #main_mov {
+        padding: 0 2%;
+    }
+
+    #main_mov .cont_wrap {
+        height: 75vh;
+    }
+
+    .cont_wrap video {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    /* main01 */
+    #main01 .cont_wrap {
+        height: 60vh;
+        background-attachment: scroll;
+    }
+
+    #main01 .main_cont {
+        padding-top: 25px;
+        height: 35vh;
+        z-index: 10;
+    }
+
+    .cont_wrap .b_text {
+        font-size: 2.25rem;
+        /* 36px */
+        margin-bottom: 0.83em;
+        /* 30px */
+    }
+
+    .cont_wrap .m_text {
+        font-size: 1.25rem;
+        margin-bottom: 0.36em;
+    }
+
+    .cont_wrap .s_text {
+        margin-top: 1.67em;
+        /* mt30 / fs18px */
+        font-size: 1.13rem;
+        /* 18px */
+    }
+
+    /* main02 */
+    #main02 .cont_wrap {
+        padding: 60px 0 0;
+        display: block;
+    }
+
+    #main02 .cont_left {
+        width: 100%;
+    }
+
+    #main02 .cont_left .s_text {
+        font-size: 1.15rem;
+        /* 20px */
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    #main02 .cont_right {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .cont_right .rich_bg {
+        width: 33.3333%;
+        height: 590px;
+        margin-left: 0;
+        background: no-repeat center top/contain
+    }
+
+    .cont_right .rich_bg.bg2 {
+        margin-top: 0;
+    }
+
+    .cont_right .rich_bg.bg3 {
+        margin-top: 0;
+    }
+
+    /* main03 */
+    #main03 .cont_wrap {
+        padding: 50px 0 0;
+        background: url(../img/main3-bg.jpg) no-repeat center top;
+    }
+    #main03 .title_area {
+        color: #fff;
+        text-align: center;
+    }
+    #main03 .title_area .sec_title {font-size: 1.75rem; }
+     #main03 .space_area {
+        max-width: 1200px;
+        margin: 40px auto 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center
+    }
+    .space_area .space > img {
+        position: static;
+        display: block;
+        width: 100%;
+    }
+    .space_area .space img:first-child {display: none;}
+    .space_area .space img:last-child {opacity: 1;}    
+    .space_area .space {
+        width: 40vw;
+        height: auto;
+        margin-right: 0;
+        transition: none;
+    }   
+    .space_area .space:hover {box-shadow: none;}
+    
+    /* main04 */
+    #main04 .cont_wrap{padding: 40px 0; }
+    #main04 .title_area .ss_text {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 1.125rem; /* 24px */
+    }
+    #main04 .title_area .m_text {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    #main04 .title_area .b_text {
+        font-size: 2rem; /* 40px */
+        font-weight: 600;
+    }
+    #main04 .model_list {
+        max-width: 1200px;
+        margin: 40px auto 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #main04 .model_list li {
+        width: 94%;
+        height: auto;
+        padding: 20px 15px; /* 30px 25px */
+        border: 1px solid rgba(255,255,255,0.7);
+        margin-bottom: 2.5%;
+    }
+    .model_list .model_text > span:first-child {
+        font-size: 30px; /* 50px */
+    }
+    .model_list .model_text > span > span {
+        font-size: 20px; /* 28px */
+    }
+    .model_list .model_text > span:last-child {
+        font-size: 16px; /* 20px */
+    }
+
+    /* footer */
+    footer .cont_wrap{padding: 40px 2.5%;}
+    footer .cont_wrap > div {margin-bottom: 25px;}
+    footer img {margin-bottom: 25px;}
+    footer .foot_address span {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    footer .const_list {
+        max-width: 60vw;   
+    }
+    footer .const_list p {
+        font-size: 16px; 
+        margin: 0 12px;
+    }
+    footer .const_list span {font-size: 15px; margin-right: 10px;}
+    }
